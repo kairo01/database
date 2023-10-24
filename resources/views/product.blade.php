@@ -19,10 +19,15 @@
     </thread>
     
     <tbody>
-        <td>qwerty</td>
-        <td>qwerty</td>
-        <td>qwerty</td>
-        <td>qwerty</td>
+        @foreach ($products as $product)
+        <tr>
+            <td>{{ $product->Product_Name }}</td>
+            <td>{{ $product->Description }}</td>
+            <td>{{ $product->Price }}</td>
+            <td>{{ $product->QuantityInStock }}</td>
+        </tr>
+        @endforeach
+        
     
     </tbody>
     
